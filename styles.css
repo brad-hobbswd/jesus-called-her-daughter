@@ -1,211 +1,351 @@
 /* =====================================================
    WHEN JESUS CALLED HER DAUGHTER
    Bradley Hobbs
-   Simple Stylesheet
+
+   Master Stylesheet
+   Part 1
+   Color Palette
+   Reset
+   Base Typography
+   Layout
 ===================================================== */
 
-/* ---------- Google Fonts ----------
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-------------------------------------*/
+/* -----------------------------------------------------
+   GOOGLE FONTS
 
-/* RESET */
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+------------------------------------------------------ */
+
+
+/* =====================================================
+   COLOR PALETTE
+===================================================== */
+
+:root{
+
+--paper:#faf7f2;
+
+--parchment:#f2eadb;
+
+--linen:#ede2cf;
+
+--cream:#fffdf8;
+
+--text:#3d312b;
+
+--text-light:#72655a;
+
+--heading:#4a362d;
+
+--plum:#5d184c;
+
+--plum-light:#7b3a66;
+
+--gold:#c9a24d;
+
+--gold-dark:#a9812b;
+
+--olive:#6e7453;
+
+--border:#ddd1bc;
+
+--line:#e7dcc8;
+
+--shadow:rgba(45,30,18,.12);
+
+--shadow-dark:rgba(25,15,8,.22);
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
 }
 
 html{
-    scroll-behavior:smooth;
+
+scroll-behavior:smooth;
+
+}
+
+img{
+
+max-width:100%;
+
+display:block;
+
 }
 
 body{
-    background:#f8f5ef;
-    color:#2d2d2d;
-    font-family:"Cormorant Garamond",serif;
-    font-size:1.35rem;
-    line-height:1.9;
+
+background:linear-gradient(
+
+180deg,
+
+#fffdf9 0%,
+
+var(--paper) 30%,
+
+var(--parchment) 100%
+
+);
+
+color:var(--text);
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:1.35rem;
+
+line-height:1.9;
+
+text-rendering:optimizeLegibility;
+
+-webkit-font-smoothing:antialiased;
+
+overflow-x:hidden;
+
 }
 
-/* LINKS */
 
-a{
-    color:#b8860b;
-    text-decoration:none;
-    transition:.3s;
-}
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
 
-a:hover{
-    color:#18324f;
-}
+h1,
+h2,
+h3,
+h4{
 
-/* MAIN */
+font-weight:600;
 
-main{
-    max-width:900px;
-    margin:auto;
-    padding:60px 25px;
-}
+line-height:1.2;
 
-/* HEADER */
-
-header{
-    text-align:center;
-    margin-bottom:70px;
-}
-
-header p{
-    font-size:1rem;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    color:#777;
-    margin-bottom:10px;
 }
 
 h1{
-    font-family:"Cinzel",serif;
-    font-size:3rem;
-    color:#18324f;
-    margin-bottom:10px;
+
+font-family:"Cinzel",serif;
+
+font-size:3.2rem;
+
+color:var(--heading);
+
+margin-bottom:12px;
+
 }
 
 h2{
-    font-family:"Cormorant Garamond",serif;
-    font-size:2rem;
-    color:#c49b3c;
-    font-style:italic;
-    font-weight:600;
-}
 
-/* CHAPTER TITLES */
+font-family:"Cormorant Garamond",serif;
+
+font-size:2.2rem;
+
+font-style:italic;
+
+font-weight:600;
+
+color:var(--gold-dark);
+
+margin-bottom:20px;
+
+}
 
 h3{
-    font-family:"Cinzel",serif;
-    color:#18324f;
-    margin:50px 0 20px;
+
+font-family:"Cinzel",serif;
+
+font-size:1.15rem;
+
+text-transform:uppercase;
+
+letter-spacing:2px;
+
+color:var(--plum);
+
+margin:55px 0 18px;
+
 }
 
-/* PARAGRAPHS */
+h4{
+
+font-family:"Cinzel",serif;
+
+font-size:1rem;
+
+color:var(--heading);
+
+margin:35px 0 15px;
+
+}
 
 p{
-    margin-bottom:28px;
+
+margin-bottom:30px;
+
+color:var(--text);
+
 }
 
-/* BLOCKQUOTE */
+strong{
 
-blockquote{
-    margin:40px 0;
-    padding:20px 30px;
-    border-left:5px solid #c49b3c;
-    background:#f1ebdd;
-    font-style:italic;
-    color:#18324f;
+color:var(--heading);
+
+font-weight:700;
+
 }
 
-/* SCRIPTURE */
+em{
 
-.scripture{
-    background:#f4efe3;
-    border-left:5px solid #c49b3c;
-    padding:25px;
-    margin:40px 0;
-    border-radius:8px;
+color:var(--plum);
+
 }
 
-/* HORIZONTAL LINE */
+small{
 
-hr{
-    border:none;
-    height:1px;
-    background:#ddd;
-    margin:70px 0;
+font-size:.9rem;
+
+color:var(--text-light);
+
 }
 
-/* NAVIGATION */
 
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-top:70px;
-    padding-top:30px;
-    border-top:1px solid #ddd;
+/* =====================================================
+   LINKS
+===================================================== */
+
+a{
+
+color:var(--plum);
+
+text-decoration:none;
+
+transition:.35s;
+
 }
 
-nav a{
-    font-weight:bold;
+a:hover{
+
+color:var(--gold-dark);
+
 }
 
-/* BUTTON */
 
-.button{
-    display:inline-block;
-    background:#c49b3c;
-    color:#fff;
-    padding:12px 24px;
-    border-radius:30px;
-    transition:.3s;
+/* =====================================================
+   PAGE LAYOUT
+===================================================== */
+
+main{
+
+width:min(900px,92%);
+
+margin:auto;
+
+padding:70px 0;
+
 }
 
-.button:hover{
-    background:#18324f;
+section{
+
+margin-bottom:40px;
+
 }
 
-/* IMAGES */
 
-img{
-    width:100%;
-    display:block;
-    border-radius:12px;
-    margin:40px 0;
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+
+text-align:center;
+
+margin-bottom:70px;
+
 }
 
-/* HERO IMAGE */
+header p{
+
+font-family:"Cinzel",serif;
+
+font-size:.95rem;
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+color:var(--text-light);
+
+margin-bottom:12px;
+
+}
+
+/* =====================================================
+   PART 2
+   Hero
+   Images
+   Decorative Elements
+   Chapters
+===================================================== */
+
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
 
 max-width:1400px;
 
-margin:40px auto 60px;
+margin:40px auto 70px;
 
-padding:0 20px;
+padding:0 25px;
 
 }
 
 .hero-image{
 
-display:block;
-
 width:100%;
-
-max-width:1200px;
 
 height:auto;
 
-margin:0 auto;
+display:block;
 
-border-radius:18px;
+border-radius:24px;
 
-box-shadow:0 20px 50px rgba(0,0,0,.18);
+box-shadow:
+
+0 30px 70px rgba(0,0,0,.18),
+
+0 8px 24px rgba(0,0,0,.10);
 
 }
 
-/* INDEX PAGE */
-
 .subtitle{
 
-font-size:1.4rem;
+max-width:760px;
+
+margin:20px auto 12px;
+
+font-size:1.45rem;
 
 font-style:italic;
 
-color:#666;
-
-margin:15px auto 10px;
-
-max-width:700px;
+color:var(--text-light);
 
 text-align:center;
 
@@ -217,33 +357,1083 @@ font-family:"Cinzel",serif;
 
 font-size:1rem;
 
-letter-spacing:4px;
+letter-spacing:5px;
 
 text-transform:uppercase;
 
-color:#b8860b;
-
-margin-bottom:50px;
+color:var(--gold-dark);
 
 text-align:center;
+
+margin-bottom:60px;
 
 }
 
-/* FOOTER */
 
-footer{
+/* =====================================================
+   IMAGES
+===================================================== */
 
-margin-top:80px;
+img{
 
-padding:40px 20px;
+width:100%;
 
-text-align:center;
+border-radius:18px;
+
+margin:45px auto;
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.08);
+
+}
+
+
+/* =====================================================
+   DECORATIVE DIVIDER
+===================================================== */
+
+.divider{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:18px;
+
+margin:65px 0;
+
+color:var(--gold);
+
+font-size:2rem;
+
+}
+
+.divider::before,
+
+.divider::after{
+
+content:"";
+
+width:120px;
+
+height:1px;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+var(--gold),
+
+transparent
+
+);
+
+}
+
+
+/* =====================================================
+   HORIZONTAL RULE
+===================================================== */
+
+hr{
+
+border:none;
+
+height:1px;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+var(--gold),
+
+transparent
+
+);
+
+margin:70px auto;
+
+}
+
+
+/* =====================================================
+   CHAPTER SECTIONS
+===================================================== */
+
+.chapter{
+
+background:rgba(255,255,255,.45);
+
+padding:40px;
+
+border:1px solid var(--border);
+
+border-radius:20px;
+
+margin-bottom:45px;
+
+box-shadow:
+
+0 12px 35px rgba(0,0,0,.05);
+
+transition:.35s;
+
+}
+
+.chapter:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.10);
+
+}
+
+.chapter h2{
+
+margin-bottom:18px;
+
+}
+
+.chapter p:last-child{
+
+margin-bottom:0;
+
+}
+
+
+/* =====================================================
+   BLOCKQUOTE
+===================================================== */
+
+blockquote{
+
+background:var(--cream);
+
+padding:35px;
+
+border-left:6px solid var(--gold);
+
+border-radius:16px;
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.05);
+
+font-style:italic;
+
+color:var(--heading);
+
+margin:50px 0;
+
+}
+
+blockquote p{
+
+margin-bottom:0;
+
+}
+
+
+/* =====================================================
+   SCRIPTURE
+===================================================== */
+
+.scripture{
+
+background:#fffaf3;
+
+padding:30px;
+
+border-left:6px solid var(--plum);
+
+border-radius:16px;
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.05);
+
+margin:50px 0;
+
+}
+
+.scripture p:last-child{
+
+margin-bottom:0;
+
+}
+
+
+/* =====================================================
+   FEATURE BOX
+===================================================== */
+
+.feature{
+
+background:linear-gradient(
+
+180deg,
+
+rgba(255,255,255,.75),
+
+rgba(255,255,255,.45)
+
+);
+
+padding:35px;
+
+border-radius:20px;
+
+border:1px solid var(--border);
+
+margin:50px 0;
+
+box-shadow:
+
+0 12px 30px rgba(0,0,0,.05);
+
+}
+
+
+/* =====================================================
+   AUTHOR PHOTO
+===================================================== */
+
+.author-photo{
+
+width:220px;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+margin:20px auto 50px;
+
+border:6px solid var(--gold);
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.15);
+
+}
+
+
+/* =====================================================
+   CONTENT IMAGES
+===================================================== */
+
+figure{
+
+margin:50px 0;
+
+}
+
+figcaption{
+
+margin-top:15px;
 
 font-size:1rem;
 
-color:#777;
+text-align:center;
 
-border-top:1px solid #ddd;
+font-style:italic;
+
+color:var(--text-light);
+
+}
+
+/* =====================================================
+   PART 3
+   Navigation
+   Buttons
+   Lists
+   Tables
+   Interactive Elements
+===================================================== */
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:20px;
+
+margin-top:80px;
+
+padding-top:35px;
+
+border-top:1px solid var(--line);
+
+}
+
+nav a{
+
+font-family:"Cinzel",serif;
+
+font-size:.95rem;
+
+letter-spacing:1px;
+
+font-weight:600;
+
+color:var(--heading);
+
+transition:.35s;
+
+}
+
+nav a:hover{
+
+color:var(--plum);
+
+transform:translateY(-2px);
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.button{
+
+display:inline-block;
+
+padding:14px 34px;
+
+border-radius:50px;
+
+background:linear-gradient(
+
+180deg,
+
+#d5b160,
+
+#bb9139
+
+);
+
+color:#ffffff;
+
+font-family:"Cinzel",serif;
+
+font-size:.95rem;
+
+letter-spacing:1px;
+
+font-weight:600;
+
+box-shadow:
+
+0 10px 25px rgba(0,0,0,.12);
+
+transition:.35s;
+
+}
+
+.button:hover{
+
+background:linear-gradient(
+
+180deg,
+
+var(--plum-light),
+
+var(--plum)
+
+);
+
+color:#fff;
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 18px 35px rgba(0,0,0,.18);
+
+}
+
+
+/* =====================================================
+   INLINE LINKS
+===================================================== */
+
+p a{
+
+font-weight:600;
+
+border-bottom:1px solid transparent;
+
+}
+
+p a:hover{
+
+border-bottom:1px solid var(--gold);
+
+}
+
+
+/* =====================================================
+   LISTS
+===================================================== */
+
+ul{
+
+margin:25px 0 35px 30px;
+
+}
+
+ol{
+
+margin:25px 0 35px 35px;
+
+}
+
+li{
+
+margin:12px 0;
+
+padding-left:6px;
+
+}
+
+li::marker{
+
+color:var(--gold-dark);
+
+}
+
+li a{
+
+color:var(--heading);
+
+font-weight:600;
+
+}
+
+li a:hover{
+
+color:var(--plum);
+
+}
+
+
+/* =====================================================
+   CONTENTS PAGE
+===================================================== */
+
+.chapter ul{
+
+margin-top:20px;
+
+}
+
+.chapter li{
+
+margin:14px 0;
+
+}
+
+
+/* =====================================================
+   TABLES
+===================================================== */
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin:45px 0;
+
+background:rgba(255,255,255,.55);
+
+border-radius:16px;
+
+overflow:hidden;
+
+box-shadow:
+
+0 12px 30px rgba(0,0,0,.05);
+
+}
+
+th{
+
+background:var(--heading);
+
+color:#ffffff;
+
+font-family:"Cinzel",serif;
+
+padding:16px;
+
+font-weight:600;
+
+}
+
+td{
+
+padding:16px;
+
+border-top:1px solid var(--line);
+
+}
+
+tr:nth-child(even){
+
+background:rgba(255,255,255,.55);
+
+}
+
+
+/* =====================================================
+   CODE
+===================================================== */
+
+code{
+
+background:#efe7d9;
+
+padding:3px 8px;
+
+border-radius:6px;
+
+font-size:.95em;
+
+color:var(--plum);
+
+}
+
+pre{
+
+background:#efe7d9;
+
+padding:25px;
+
+border-radius:16px;
+
+overflow:auto;
+
+margin:35px 0;
+
+}
+
+
+/* =====================================================
+   SELECTION
+===================================================== */
+
+::selection{
+
+background:var(--gold);
+
+color:#fff;
+
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:var(--paper);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--gold);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:var(--plum);
+
+}
+
+
+/* =====================================================
+   FOCUS
+===================================================== */
+
+a:focus,
+
+button:focus{
+
+outline:2px solid var(--gold);
+
+outline-offset:4px;
+
+}
+
+
+/* =====================================================
+   TRANSITIONS
+===================================================== */
+
+img,
+
+.chapter,
+
+.button,
+
+a{
+
+transition:.35s ease;
+
+}
+
+/* =====================================================
+   PART 4
+   Reading Experience
+   Chapters
+   Scripture
+   Pull Quotes
+   Notes
+===================================================== */
+
+
+/* =====================================================
+   ARTICLE CONTENT
+===================================================== */
+
+section{
+
+position:relative;
+
+}
+
+section p{
+
+max-width:760px;
+
+margin:0 auto 30px;
+
+}
+
+
+/* =====================================================
+   FIRST PARAGRAPH DROP CAP
+===================================================== */
+
+section p:first-of-type::first-letter{
+
+float:left;
+
+font-family:"Cinzel",serif;
+
+font-size:4.8rem;
+
+line-height:.82;
+
+padding-right:10px;
+
+padding-top:10px;
+
+color:var(--gold-dark);
+
+}
+
+
+/* =====================================================
+   CHAPTER HEADINGS
+===================================================== */
+
+.chapter-title{
+
+text-align:center;
+
+margin-bottom:45px;
+
+}
+
+.chapter-title h1{
+
+margin-bottom:8px;
+
+}
+
+.chapter-title h2{
+
+margin-bottom:15px;
+
+}
+
+.chapter-number{
+
+font-family:"Cinzel",serif;
+
+font-size:.95rem;
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+color:var(--plum);
+
+}
+
+
+/* =====================================================
+   OPENING PARAGRAPH
+===================================================== */
+
+.lead{
+
+font-size:1.55rem;
+
+line-height:1.8;
+
+color:var(--heading);
+
+font-weight:500;
+
+}
+
+
+/* =====================================================
+   SCRIPTURE BLOCK
+===================================================== */
+
+.scripture{
+
+background:linear-gradient(
+
+180deg,
+
+#fffdf9,
+
+#f6efe3
+
+);
+
+padding:35px;
+
+border-left:6px solid var(--plum);
+
+border-radius:18px;
+
+margin:55px auto;
+
+max-width:760px;
+
+}
+
+.scripture-reference{
+
+display:block;
+
+margin-top:18px;
+
+font-family:"Cinzel",serif;
+
+font-size:.95rem;
+
+letter-spacing:2px;
+
+color:var(--gold-dark);
+
+}
+
+
+/* =====================================================
+   PULL QUOTES
+===================================================== */
+
+.pull-quote{
+
+max-width:760px;
+
+margin:70px auto;
+
+text-align:center;
+
+font-family:"Cinzel",serif;
+
+font-size:2rem;
+
+line-height:1.5;
+
+color:var(--plum);
+
+position:relative;
+
+}
+
+.pull-quote::before{
+
+content:"“";
+
+font-size:5rem;
+
+color:rgba(201,162,77,.35);
+
+position:absolute;
+
+left:-20px;
+
+top:-35px;
+
+}
+
+.pull-quote::after{
+
+content:"”";
+
+font-size:5rem;
+
+color:rgba(201,162,77,.35);
+
+position:absolute;
+
+right:-20px;
+
+bottom:-65px;
+
+}
+
+
+/* =====================================================
+   EMPHASIS PARAGRAPH
+===================================================== */
+
+.emphasis{
+
+font-size:1.6rem;
+
+text-align:center;
+
+font-style:italic;
+
+color:var(--heading);
+
+margin:60px auto;
+
+max-width:700px;
+
+}
+
+
+/* =====================================================
+   DIVIDERS
+===================================================== */
+
+.chapter-divider{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin:70px auto;
+
+font-size:2rem;
+
+color:var(--gold);
+
+}
+
+.chapter-divider::before,
+
+.chapter-divider::after{
+
+content:"";
+
+height:1px;
+
+width:120px;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+var(--gold),
+
+transparent
+
+);
+
+margin:0 20px;
+
+}
+
+
+/* =====================================================
+   FOOTNOTES
+===================================================== */
+
+.notes{
+
+background:rgba(255,255,255,.45);
+
+border-radius:18px;
+
+padding:30px;
+
+margin:60px auto;
+
+border-left:5px solid var(--gold);
+
+font-size:1.15rem;
+
+}
+
+.notes h4{
+
+margin-top:0;
+
+margin-bottom:20px;
+
+}
+
+.notes p{
+
+margin-bottom:18px;
+
+}
+
+
+/* =====================================================
+   SMALL CAPS
+===================================================== */
+
+.smallcaps{
+
+font-variant:small-caps;
+
+letter-spacing:1px;
+
+}
+
+
+/* =====================================================
+   CHAPTER END
+===================================================== */
+
+.chapter-end{
+
+text-align:center;
+
+margin:80px auto 40px;
+
+font-family:"Cinzel",serif;
+
+font-size:1.4rem;
+
+letter-spacing:3px;
+
+color:var(--gold-dark);
+
+}
+
+.chapter-end::before{
+
+content:"✦";
+
+display:block;
+
+font-size:1.8rem;
+
+margin-bottom:20px;
+
+color:var(--gold);
+
+}
+
+
+/* =====================================================
+   PAGE TRANSITION
+===================================================== */
+
+.page-end{
+
+margin:90px auto;
+
+height:1px;
+
+max-width:300px;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+var(--gold),
+
+transparent
+
+);
+
+}
+
+/* =====================================================
+   PART 5
+   Footer
+   Mobile
+   Print
+   Accessibility
+   Finishing Touches
+===================================================== */
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+margin-top:100px;
+
+padding:50px 20px;
+
+text-align:center;
+
+background:linear-gradient(
+
+180deg,
+
+transparent,
+
+rgba(233,224,206,.55)
+
+);
+
+border-top:1px solid var(--border);
 
 }
 
@@ -251,19 +1441,136 @@ footer p{
 
 margin:0;
 
+font-size:1rem;
+
+color:var(--text-light);
+
+letter-spacing:1px;
+
 }
 
-@media (max-width:768px){
 
-body{
+/* =====================================================
+   SECTION SPACING
+===================================================== */
 
-font-size:1.15rem;
+section+section{
+
+margin-top:70px;
+
+}
+
+
+/* =====================================================
+   SMOOTH FADE
+===================================================== */
+
+main{
+
+animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* =====================================================
+   IMAGE HOVER
+===================================================== */
+
+img:hover{
+
+transform:scale(1.01);
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width:992px){
+
+.hero{
+
+padding:0 18px;
 
 }
 
 main{
 
-padding:35px 20px;
+width:92%;
+
+}
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width:768px){
+
+body{
+
+font-size:1.18rem;
+
+line-height:1.8;
+
+}
+
+main{
+
+width:92%;
+
+padding:45px 0;
+
+}
+
+.hero{
+
+margin:20px auto 45px;
+
+padding:0 12px;
+
+}
+
+.hero-image{
+
+border-radius:16px;
+
+}
+
+header{
+
+margin-bottom:50px;
+
+}
+
+header p{
+
+letter-spacing:3px;
+
+font-size:.85rem;
 
 }
 
@@ -279,15 +1586,71 @@ font-size:1.6rem;
 
 }
 
-.subtitle{
+h3{
 
-font-size:1.15rem;
+font-size:1rem;
 
 }
 
-.hero-image{
+.subtitle{
 
-border-radius:12px;
+font-size:1.2rem;
+
+}
+
+.author{
+
+letter-spacing:3px;
+
+font-size:.9rem;
+
+margin-bottom:35px;
+
+}
+
+section p:first-of-type::first-letter{
+
+font-size:3.5rem;
+
+padding-right:8px;
+
+padding-top:8px;
+
+}
+
+.chapter{
+
+padding:28px;
+
+}
+
+blockquote,
+
+.scripture,
+
+.feature,
+
+.notes{
+
+padding:25px;
+
+}
+
+.pull-quote{
+
+font-size:1.5rem;
+
+}
+
+.divider::before,
+
+.divider::after,
+
+.chapter-divider::before,
+
+.chapter-divider::after{
+
+width:55px;
 
 }
 
@@ -295,13 +1658,13 @@ nav{
 
 flex-direction:column;
 
-gap:20px;
+align-items:stretch;
+
+gap:18px;
 
 }
 
 nav a{
-
-width:100%;
 
 text-align:center;
 
@@ -309,36 +1672,185 @@ text-align:center;
 
 .button{
 
+display:block;
+
 width:100%;
 
+text-align:center;
+
+}
+
+table{
+
+display:block;
+
+overflow-x:auto;
+
 }
 
 }
 
-/* CONTENTS */
 
-ul{
+/* =====================================================
+   SMALL PHONES
+===================================================== */
 
-margin:20px 0 0 25px;
+@media (max-width:480px){
 
-}
+body{
 
-li{
-
-margin:12px 0;
-
-}
-
-li a{
-
-color:#18324f;
-
-font-weight:600;
+font-size:1.08rem;
 
 }
 
-li a:hover{
+h1{
 
-color:#b8860b;
+font-size:1.85rem;
 
 }
+
+h2{
+
+font-size:1.4rem;
+
+}
+
+.hero{
+
+padding:0 8px;
+
+}
+
+.chapter{
+
+padding:22px;
+
+}
+
+blockquote,
+
+.scripture,
+
+.notes{
+
+padding:20px;
+
+}
+
+.pull-quote{
+
+font-size:1.3rem;
+
+}
+
+}
+
+
+/* =====================================================
+   PRINT
+===================================================== */
+
+@media print{
+
+body{
+
+background:#ffffff;
+
+color:#000000;
+
+font-size:12pt;
+
+}
+
+.hero,
+
+nav,
+
+.button,
+
+footer{
+
+display:none;
+
+}
+
+main{
+
+max-width:100%;
+
+width:100%;
+
+padding:0;
+
+}
+
+a{
+
+color:#000;
+
+text-decoration:none;
+
+}
+
+.chapter{
+
+border:none;
+
+box-shadow:none;
+
+background:#fff;
+
+padding:0;
+
+}
+
+blockquote,
+
+.scripture{
+
+background:#fff;
+
+box-shadow:none;
+
+}
+
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+:focus-visible{
+
+outline:3px solid var(--gold);
+
+outline-offset:4px;
+
+border-radius:4px;
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+animation:none!important;
+
+transition:none!important;
+
+scroll-behavior:auto!important;
+
+}
+
+}
+
+
+/* =====================================================
+   END OF STYLESHEET
+===================================================== */
