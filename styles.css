@@ -314,3 +314,31 @@ width:100%;
 }
 
 }
+
+/* CONTENTS */
+
+ul{
+
+margin:20px 0 0 25px;
+
+}
+
+li{
+
+margin:12px 0;
+
+}
+
+li a{
+
+color:#18324f;
+
+font-weight:600;
+
+}
+
+li a:hover{
+
+color:#b8860b;
+
+}
